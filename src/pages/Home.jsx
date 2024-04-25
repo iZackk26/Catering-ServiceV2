@@ -6,11 +6,9 @@ import Carousel_Home from '../components/Carrousel/Carrousel';
 
 function Home() {
   return (
-    <Base>
-      <div>
-        <Carousel_Home />
-      </div>
-    </Base>
+    <div>
+      <h1>Home</h1>
+    </div>
     
   )
 
