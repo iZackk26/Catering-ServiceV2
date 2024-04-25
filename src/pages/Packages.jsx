@@ -15,7 +15,8 @@ export default function Packages() {
       imageUrl: Lobster,
       imageAlt: "Lobsters and crabs",
       title: "Fresh Ocean",
-      description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience"
+      description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience",
+      stars: 4
     },
     {
       imageUrl: Sushi,
