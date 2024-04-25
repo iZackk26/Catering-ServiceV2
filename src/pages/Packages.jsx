@@ -31,73 +31,89 @@ export default function Packages() {
       imageAlt: "Lobsters and crabs",
       title: "Fresh Ocean",
       description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience",
-      stars: 4
+      stars: 4,
+      miniDishes: [Lobster, Sushi, Fish]
     },
     {
       imageUrl: Sushi,
       imageAlt: "Lobsters and crabs",
       title: "Sea Delights",
-      description: "Delve into exquisite Japanese flavors with our carefully curated sushi package, offering a blend of traditional and contemporary sushi and sashimi."
+      description: "Delve into exquisite Japanese flavors with our carefully curated sushi package, offering a blend of traditional and contemporary sushi and sashimi.",
+      stars: 4,
+      miniDishes: [Lobster, Sushi, Fish]
     },
     {
       imageUrl: Fish,
       imageAlt: "Lobsters and crabs",
       title: "Fisherman's Feast",
-      description: "Savor the heartiness of classic seafood with our 'Fisherman's Feast,' a collection of comforting and flavorful dishes straight from the fisherman's net."
+      description: "Savor the heartiness of classic seafood with our 'Fisherman's Feast,' a collection of comforting and flavorful dishes straight from the fisherman's net.",
+      stars: 3,
+      miniDishes: [Lobster, Sushi, Fish]
     },
     {
       imageUrl: LuxuryClassics,
       imageAlt: "Meat1",
       title: "Luxury Classics",
-      description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite."
+      description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite.",
+      stars: 5
+
     },
     {
       imageUrl: Tour,
       imageAlt: "Meat2",
       title: "Global Tour",
-      description: "Embark on a culinary journey with meats from around the world. An unforgettable taste adventure awaits."
+      description: "Embark on a culinary journey with meats from around the world. An unforgettable taste adventure awaits.",
+      stars: 3
+
     },
     {
       imageUrl: Grill,
       imageAlt: "Meat3",
       title: "Grill Party",
-      description: "The ultimate selection for grill enthusiasts. Elevate your next barbecue experience with the finest meats and sides."
+      description: "The ultimate selection for grill enthusiasts. Elevate your next barbecue experience with the finest meats and sides.",
+      stars: 4
     },
     {
       imageUrl: Veggie,
       imageAlt: "Vegetarian",
       title: "Global Veggie Soups Green Gastronomy",
-      description: "Offers a curated selection of flavorful international vegetarian soups. Ideal for any event seeking delicious, healthy options."
+      description: "Offers a curated selection of flavorful international vegetarian soups. Ideal for any event seeking delicious, healthy options.",
+      stars: 1
     },
     {
       imageUrl: GreenGastronomy,
       imageAlt: "Vegetarian2",
       title: "Green Gastronomy",
-      description: "Explore the richness and diversity of vegetarian cuisine with this eclectic package. From comforting dishes to exotic flavors, this menu has it all."
+      description: "Explore the richness and diversity of vegetarian cuisine with this eclectic package. From comforting dishes to exotic flavors, this menu has it all.",
+      stars: 3
     },
     {
       imageUrl: GardenDelights,
       imageAlt: "Vegetarian3",
       title: "Garden Delights",
-      description: "Enjoy a garden-inspired culinary experience with this irresistible package. Each dish is bursting with freshness and flavor, ensuring a memorable meal."
+      description: "Enjoy a garden-inspired culinary experience with this irresistible package. Each dish is bursting with freshness and flavor, ensuring a memorable meal.",
+      stars: 4
     },
     {
       imageUrl: Caribbean,
       imageAlt: "Traditional",
       title: "Caribbean Flavors",
-      description: "Experience the vibrant and bold flavors of the Caribbean with this package. Each dish is a celebration of the region's rich culinary heritage."
+      description: "Experience the vibrant and bold flavors of the Caribbean with this package. Each dish is a celebration of the region's rich culinary heritage.",
+      stars: 4
     },
     {
       imageUrl: SunriseTico,
       imageAlt: "Traditional2",
       title: "Sunrise Tico",
-      description: "A breakfast that combines the rich flavors of traditional gallo pinto, sweet plantains, and aromatic coffee."
+      description: "A breakfast that combines the rich flavors of traditional gallo pinto, sweet plantains, and aromatic coffee.",
+      stars: 5
     },
     {
       imageUrl: BreadRama,
       imageAlt: "Traditional3",
       title: "Bread Rama",
-      description: "An exclusive selection of traditional Costa Rican breads, each with its own unique history and flavor."
+      description: "An exclusive selection of traditional Costa Rican breads, each with its own unique history and flavor.",
+      stars: 3
     }
     
   ]
