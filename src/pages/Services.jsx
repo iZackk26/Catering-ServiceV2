@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../components/Header';
 import ServiceCard from '../components/services/ServicesCard';
 import MyFullCalendar from '../components/services/MyFullCalendar';
+import '../index.css';
 
 export default function Services() {
   const services = [
