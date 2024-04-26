@@ -9,6 +9,29 @@ import Lobster from '../assets/Packages/Seafood/sea-food.webp';
 import Sushi from '../assets/Packages/Seafood/sea-food2.webp';
 import Fish from '../assets/Packages/Seafood/sea-food3.webp';
 
+// MiniDishes
+import BakedSalmon from '../assets/Packages/Seafood/Baked-Salmon.webp';
+import Ceviche from '../assets/Packages/Seafood/ceviche.webp';
+import FishDonburi from '../assets/Packages/Seafood/fish-donburi.webp';
+import GoldenCrispyTilapia from '../assets/Packages/Seafood/Tilapia-Golden.webp';
+import GrilledFishFillet from '../assets/Packages/Seafood/GrilledFishFillet.webp';
+import GrilledLobster from '../assets/Packages/Seafood/grilled-lobster.webp';
+import JapaneseDelights from '../assets/Packages/Seafood/japanesedelights.webp';
+import LeFestin from '../assets/Packages/Seafood/le-festin.webp';
+import MachacaWithEggs from '../assets/Packages/Seafood/Machaca with Eggs.webp';
+import Main from '../assets/Packages/Seafood/Main.webp';
+import Nigiri from '../assets/Packages/Seafood/nigiri.webp';
+import Okonomiyaki from '../assets/Packages/Seafood/okonomiyaki.webp';
+import Paella from '../assets/Packages/Seafood/paella.webp';
+import Salmon from '../assets/Packages/Seafood/salmon.webp';
+import Sashimi from '../assets/Packages/Seafood/sashimi.webp';
+import SavaloSupreme from '../assets/Packages/Seafood/savalo-supreme.webp';
+import Seasame from '../assets/Packages/Seafood/seasame.webp';
+import ShrimPineappleSkewers from '../assets/Packages/Seafood/shrim-pineapple-skewers.webp';
+import Tacos from '../assets/Packages/Seafood/tacos.webp';
+import Tempura from '../assets/Packages/Seafood/tempura.webp';
+import Udon from '../assets/Packages/Seafood/udon.webp';
+
 // Meat
 import LuxuryClassics from '../assets/Packages/Meat/meat.webp';
 import Tour from '../assets/Packages/Meat/meat2.webp';
@@ -32,7 +55,7 @@ export default function Packages() {
       title: "Fresh Ocean",
       description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience",
       stars: 4,
-      miniDishes: [Lobster, Sushi, Fish]
+      miniDishes: [GrilledLobster, ShrimPineappleSkewers, Ceviche, Salmon, Paella, Tacos ]
     },
     {
       imageUrl: Sushi,
@@ -40,7 +63,7 @@ export default function Packages() {
       title: "Sea Delights",
       description: "Delve into exquisite Japanese flavors with our carefully curated sushi package, offering a blend of traditional and contemporary sushi and sashimi.",
       stars: 4,
-      miniDishes: [Lobster, Sushi, Fish]
+      miniDishes: [Nigiri, Okonomiyaki, FishDonburi, Udon, Sashimi, Tempura]
     },
     {
       imageUrl: Fish,
@@ -48,14 +71,15 @@ export default function Packages() {
       title: "Fisherman's Feast",
       description: "Savor the heartiness of classic seafood with our 'Fisherman's Feast,' a collection of comforting and flavorful dishes straight from the fisherman's net.",
       stars: 3,
-      miniDishes: [Lobster, Sushi, Fish]
+      miniDishes: [BakedSalmon, GoldenCrispyTilapia, SavaloSupreme, MachacaWithEggs, Seasame, GrilledFishFillet]
     },
     {
       imageUrl: LuxuryClassics,
       imageAlt: "Meat1",
       title: "Luxury Classics",
       description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite.",
-      stars: 5
+      stars: 5,
+      miniDishes: [Lobster, Sushi, Fish]
 
     },
     {
