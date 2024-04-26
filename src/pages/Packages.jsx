@@ -91,6 +91,30 @@ import Caribbean from '../assets/Packages/Traditional/traditional.webp';
 import SunriseTico from '../assets/Packages/Traditional/traditional2.webp';
 import BreadRama from '../assets/Packages/Traditional/traditional3.webp';
 
+// MiniDishes Traditional
+import CaribbeanChicken from '../assets/Packages/Traditional/caribbean-chicken.webp';
+import CaribbeanCocadas from '../assets/Packages/Traditional/caribbean-cocadas.webp';
+import CaribbeanPanBon from '../assets/Packages/Traditional/caribbean-pan-bon.webp';
+import CaribbeanPatacones from '../assets/Packages/Traditional/caribbean-patacones.webp';
+import CaribbeanPatty from '../assets/Packages/Traditional/caribbean-patty.webp';
+import CaribbeanRiceBeans from '../assets/Packages/Traditional/caribbean-rice-beans.webp';
+import Casado from '../assets/Packages/Traditional/casado.webp';
+import Omelet from '../assets/Packages/Traditional/omelet.webp';
+import PanBraided from '../assets/Packages/Traditional/pan-braided.webp';
+import PanChiverre from '../assets/Packages/Traditional/pan-chiverre.webp';
+import PanCornbread from '../assets/Packages/Traditional/pan-cornbread.webp';
+import PanRosquillas from '../assets/Packages/Traditional/pan-rosquillas.webp';
+import PanSobado from '../assets/Packages/Traditional/pan-sobado.webp';
+import PanSweetBread from '../assets/Packages/Traditional/pan-sweet-bread.webp';
+import Pancakes from '../assets/Packages/Traditional/pancakes.webp';
+import Pinto from '../assets/Packages/Traditional/pinto.webp';
+import Pinto2 from '../assets/Packages/Traditional/pinto2.webp';
+import Platano from '../assets/Packages/Traditional/platano.webp';
+import Traditional from '../assets/Packages/Traditional/traditional.webp';
+import Traditional2 from '../assets/Packages/Traditional/traditional2.webp';
+import Traditional3 from '../assets/Packages/Traditional/traditional3.webp';
+
+
 export default function Packages() {
   const cardsData = [
     {
@@ -172,21 +196,24 @@ export default function Packages() {
       imageAlt: "Traditional",
       title: "Caribbean Flavors",
       description: "Experience the vibrant and bold flavors of the Caribbean with this package. Each dish is a celebration of the region's rich culinary heritage.",
-      stars: 4
+      stars: 4,
+      miniDishes: [CaribbeanRiceBeans, CaribbeanCocadas, CaribbeanChicken, CaribbeanPanBon, CaribbeanPatacones, CaribbeanPatty]
     },
     {
       imageUrl: SunriseTico,
       imageAlt: "Traditional2",
       title: "Sunrise Tico",
       description: "A breakfast that combines the rich flavors of traditional gallo pinto, sweet plantains, and aromatic coffee.",
-      stars: 5
+      stars: 5,
+      miniDishes: [Pinto, Pinto2, Casado, Omelet, Pancakes, Platano]
     },
     {
       imageUrl: BreadRama,
       imageAlt: "Traditional3",
       title: "Bread Rama",
       description: "An exclusive selection of traditional Costa Rican breads, each with its own unique history and flavor.",
-      stars: 3
+      stars: 3,
+      miniDishes: [PanSobado, PanRosquillas, PanCornbread, PanBraided, PanSweetBread, PanChiverre]
     }
     
   ]
@@ -194,7 +221,7 @@ export default function Packages() {
   return (
     <>
     <Header />
-    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+    <div className='px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
       {cardsData.map((card, index) => (
         <CardPackages key={index} {...card} />
       ))}
