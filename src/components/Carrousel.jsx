@@ -6,7 +6,7 @@ import img3 from '../assets/Carousel/traditional-food.jpg'
 
 function Carousel_Home() {
   return (
-    <div className="relative mt-16 w-full h-screen">
+    <div className="relative  w-full h-screen">
       {/* Carrusel */}
       <Carousel>
         <img src={img1} alt="Carne" className="w-full h-full object-cover" />
