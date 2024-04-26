@@ -65,6 +65,27 @@ import Veggie from '../assets/Packages/Vegetarian/vegetarian2.webp';
 import GreenGastronomy from '../assets/Packages/Vegetarian/vegetarian.webp';
 import GardenDelights from '../assets/Packages/Vegetarian/vegetarian3.webp';
 
+// MiniDishes Vegetarian
+import Capresse from '../assets/Packages/Vegetarian/capresse.webp';
+import CoconutCurry from '../assets/Packages/Vegetarian/coconut-curry.webp';
+import CreamyMushrooms from '../assets/Packages/Vegetarian/creamy-mushrooms.webp';
+import CreamyTomatoe from '../assets/Packages/Vegetarian/creamy-tomatoe.webp';
+import FalafelSalad from '../assets/Packages/Vegetarian/falafel-salad.webp';
+import MediterraneanSalad from '../assets/Packages/Vegetarian/mediterranean-salad.webp';
+import RainbowQuinoa from '../assets/Packages/Vegetarian/rainbow-quinoa.webp';
+import RoastedBeet from '../assets/Packages/Vegetarian/roasted-beet.webp';
+import RoastedButternut from '../assets/Packages/Vegetarian/roasted-butternut.webp';
+import SpicyBlackBean from '../assets/Packages/Vegetarian/spicy-black-bean.webp';
+import TropicalSalad from '../assets/Packages/Vegetarian/tropical-salad.webp';
+import VegetableMinestrone from '../assets/Packages/Vegetarian/vegetable-minestrone.webp';
+import Hamburguer from '../assets/Packages/Vegetarian/hamburger.webp';
+import Pizza from '../assets/Packages/Vegetarian/pizza.webp';
+import TacosVege from '../assets/Packages/Vegetarian/tacos.webp';
+import PanPita from '../assets/Packages/Vegetarian/PanPita.webp';
+import Wrap from '../assets/Packages/Vegetarian/WrapVege.webp';
+import Garbanzos from '../assets/Packages/Vegetarian/Garbanzos.webp';
+
+
 // Traditional
 import Caribbean from '../assets/Packages/Traditional/traditional.webp';
 import SunriseTico from '../assets/Packages/Traditional/traditional2.webp';
@@ -110,7 +131,8 @@ export default function Packages() {
       imageAlt: "Meat2",
       title: "Global Tour",
       description: "Embark on a culinary journey with meats from around the world. An unforgettable taste adventure awaits.",
-      stars: 3
+      stars: 3,
+      miniDishes: [ChickenCordonBleu, ChickenTikkaMasalaWithPotatoes, Mushroom, ChickenCurry, HerbRoastedChicken]
 
     },
     {
@@ -126,21 +148,24 @@ export default function Packages() {
       imageAlt: "Vegetarian",
       title: "Global Veggie Soups Green Gastronomy",
       description: "Offers a curated selection of flavorful international vegetarian soups. Ideal for any event seeking delicious, healthy options.",
-      stars: 1
+      stars: 1,
+      miniDishes: [CreamyTomatoe, RoastedButternut, VegetableMinestrone, CoconutCurry, CreamyMushrooms, SpicyBlackBean] 
     },
     {
       imageUrl: GreenGastronomy,
       imageAlt: "Vegetarian2",
       title: "Green Gastronomy",
       description: "Explore the richness and diversity of vegetarian cuisine with this eclectic package. From comforting dishes to exotic flavors, this menu has it all.",
-      stars: 3
+      stars: 3,
+      miniDishes: [MediterraneanSalad, RainbowQuinoa, RoastedBeet, FalafelSalad, TropicalSalad, Capresse]
     },
     {
       imageUrl: GardenDelights,
       imageAlt: "Vegetarian3",
       title: "Garden Delights",
       description: "Enjoy a garden-inspired culinary experience with this irresistible package. Each dish is bursting with freshness and flavor, ensuring a memorable meal.",
-      stars: 4
+      stars: 4,
+      miniDishes: [TacosVege, Pizza, Hamburguer, PanPita, Wrap, Garbanzos]
     },
     {
       imageUrl: Caribbean,
