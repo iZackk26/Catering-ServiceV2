@@ -58,6 +58,10 @@ import Meat from '../assets/Packages/Meat/meat.webp';
 import Meat2 from '../assets/Packages/Meat/meat2.webp';
 import Meat3 from '../assets/Packages/Meat/meat3.webp';
 import Mushroom from '../assets/Packages/Meat/mushroom.webp';
+import Wagyu from '../assets/Packages/Meat/Wagyu.webp';
+import Bistec from '../assets/Packages/Meat/luxury-bistec.webp';
+import Tomahawk from '../assets/Packages/Meat/tomahawk.webp';
+import Suiza from '../assets/Packages/Meat/suiza-meat.webp';
 
 
 // Vegetarian
@@ -147,7 +151,7 @@ export default function Packages() {
       title: "Luxury Classics",
       description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite.",
       stars: 5,
-      miniDishes: [FiletMignon, GrillLobster, AngusRibeye]
+      miniDishes: [FiletMignon, GrillLobster, AngusRibeye, Bistec, Wagyu, Tomahawk]
 
     },
     {
@@ -156,7 +160,7 @@ export default function Packages() {
       title: "Global Tour",
       description: "Embark on a culinary journey with meats from around the world. An unforgettable taste adventure awaits.",
       stars: 3,
-      miniDishes: [ChickenCordonBleu, ChickenTikkaMasalaWithPotatoes, Mushroom, ChickenCurry, HerbRoastedChicken]
+      miniDishes: [ChickenCordonBleu, ChickenTikkaMasalaWithPotatoes, Mushroom, ChickenCurry, HerbRoastedChicken, Suiza]
 
     },
     {
