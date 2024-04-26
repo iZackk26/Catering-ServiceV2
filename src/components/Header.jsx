@@ -12,7 +12,7 @@ import logo from '../assets/logo.jpg'
 export default function Header() {
   return (
     <header> 
-      <div className={`top-0 w-full h-full z-10 flex flex-col justify-between`}>
+      <div className='top-0 w-full h-full z-10 flex flex-col justify-between'>
         <div className="flex justify-between items-center p-4">
           <div className="flex items-center ">
             <div className="mr-4">
