@@ -1,6 +1,8 @@
 import React from 'react';
+// Components
 import Header from '../components/Header';
 import ServiceCard from '../components/services/ServicesCard';
+import MyFullCalendar from '../components/services/MyFullCalendar';
 
 export default function Services() {
   const services = [
@@ -27,7 +29,7 @@ export default function Services() {
   return (
     <>
       <Header />
-      <div className="container mx-auto mt-5">
+      <div className="container mx-auto mt-5 mb-8">
         <h1 className="text-center text-3xl font-bold my-5">Our Services</h1>
         <p className="text-center text-lg mb-6">
           Explore our wide range of services designed to help you achieve your goals. Each service is tailored to meet your specific needs.
@@ -39,7 +41,8 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </div>
+      </div >
+      <MyFullCalendar />
     </>
   );
 }
