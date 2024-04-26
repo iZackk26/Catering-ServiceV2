@@ -26,7 +26,7 @@ export default function Contact() {
       <Header />
       <div className="container mx-auto mt-5 px-4">
         <h2 className="text-center mb-4">Contact Our Developers</h2>
-        <div className="flex flex-wrap justify-between gap-6">
+        <div className="flex justify-around flex-nowrap items-center gap-4">
           {developers.map(dev => (
             <DeveloperCard key={dev.username} {...dev} />
           ))}
