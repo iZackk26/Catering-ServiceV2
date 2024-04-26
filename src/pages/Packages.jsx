@@ -37,6 +37,29 @@ import LuxuryClassics from '../assets/Packages/Meat/meat.webp';
 import Tour from '../assets/Packages/Meat/meat2.webp';
 import Grill from '../assets/Packages/Meat/meat3.webp';
 
+// MiniDishes Meat
+import Chorizo from '../assets/Packages/Meat/grill-chorizo.webp';
+import AngusRibeye from '../assets/Packages/Meat/angus-ribeye.webp';
+import ChickenCordonBleu from '../assets/Packages/Meat/ChickenCordonBleu.webp';
+import ChickenCurry from '../assets/Packages/Meat/chickenCurry.webp';
+import ChickenSalad from '../assets/Packages/Meat/ChickenSalad.webp';
+import ChickenTikkaMasalaWithPotatoes from '../assets/Packages/Meat/MalasaPotatoes.webp';
+import FiletMignon from '../assets/Packages/Meat/filet-mignon.webp';
+import GrillChorizo from '../assets/Packages/Meat/grill-chorizo.webp';
+import GrillDuck from '../assets/Packages/Meat/grill-duck.webp';
+import GrillLobster from '../assets/Packages/Meat/grill-lobster.webp';
+import GrillOctopus from '../assets/Packages/Meat/grill-octopus.webp';
+import GrillPork from '../assets/Packages/Meat/grill-pork.webp';
+import GrillSausage from '../assets/Packages/Meat/grill-sausage.webp';
+import GrilledLambChops from '../assets/Packages/Meat/grilled-lamb-chops.webp';
+import HerbRoastedChicken from '../assets/Packages/Meat/HerbChicken.webp';
+import MeatWall from '../assets/Packages/Meat/meat-wall.webp';
+import Meat from '../assets/Packages/Meat/meat.webp';
+import Meat2 from '../assets/Packages/Meat/meat2.webp';
+import Meat3 from '../assets/Packages/Meat/meat3.webp';
+import Mushroom from '../assets/Packages/Meat/mushroom.webp';
+
+
 // Vegetarian
 import Veggie from '../assets/Packages/Vegetarian/vegetarian2.webp';
 import GreenGastronomy from '../assets/Packages/Vegetarian/vegetarian.webp';
@@ -55,7 +78,7 @@ export default function Packages() {
       title: "Fresh Ocean",
       description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience",
       stars: 4,
-      miniDishes: [GrilledLobster, ShrimPineappleSkewers, Ceviche, Salmon, Paella, Tacos ]
+      miniDishes: [GrilledLobster, ShrimPineappleSkewers, Ceviche, Salmon, Paella, Tacos]
     },
     {
       imageUrl: Sushi,
@@ -79,7 +102,7 @@ export default function Packages() {
       title: "Luxury Classics",
       description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite.",
       stars: 5,
-      miniDishes: [Lobster, Sushi, Fish]
+      miniDishes: [FiletMignon, GrillLobster, AngusRibeye]
 
     },
     {
@@ -95,7 +118,8 @@ export default function Packages() {
       imageAlt: "Meat3",
       title: "Grill Party",
       description: "The ultimate selection for grill enthusiasts. Elevate your next barbecue experience with the finest meats and sides.",
-      stars: 4
+      stars: 4,
+      miniDishes: [GrillOctopus, GrillDuck, GrillLobster, GrillChorizo, GrillPork, GrillSausage]
     },
     {
       imageUrl: Veggie,
