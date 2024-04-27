@@ -1,6 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from "flowbite-react";
+
+// Components
 import Header from '../components/Header';
+
 import DeveloperCard from '../components/contact/DeveloperCard';
+
 
 export default function Contact() {
   const developers = [
@@ -24,14 +30,21 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <div className="container mx-auto mt-5 px-4">
+      
+      <div className="flex justify-center mt-5">
+      <Link to="/catering"> <Button gradientDuoTone="greenToBlue">Contact us</Button></Link>
+      </div>
+      
+        
+      
+      {/* <div className="container mx-auto mt-5 px-4">
         <h2 className="text-center mb-4">Contact Our Developers</h2>
         <div className="flex justify-around flex-nowrap items-center gap-4">
           {developers.map(dev => (
             <DeveloperCard key={dev.username} {...dev} />
           ))}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
