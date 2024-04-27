@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import DeveloperCard from '../components/contact/DeveloperCard';
+import Footer from '../components/Footer';
 
 export default function Contact() {
   const developers = [
@@ -32,6 +33,7 @@ export default function Contact() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }

@@ -16,10 +16,7 @@ import FishDonburi from '../assets/Packages/Seafood/fish-donburi.webp';
 import GoldenCrispyTilapia from '../assets/Packages/Seafood/Tilapia-Golden.webp';
 import GrilledFishFillet from '../assets/Packages/Seafood/GrilledFishFillet.webp';
 import GrilledLobster from '../assets/Packages/Seafood/grilled-lobster.webp';
-import JapaneseDelights from '../assets/Packages/Seafood/japanesedelights.webp';
-import LeFestin from '../assets/Packages/Seafood/le-festin.webp';
 import MachacaWithEggs from '../assets/Packages/Seafood/Machaca with Eggs.webp';
-import Main from '../assets/Packages/Seafood/Main.webp';
 import Nigiri from '../assets/Packages/Seafood/nigiri.webp';
 import Okonomiyaki from '../assets/Packages/Seafood/okonomiyaki.webp';
 import Paella from '../assets/Packages/Seafood/paella.webp';
@@ -38,11 +35,9 @@ import Tour from '../assets/Packages/Meat/meat2.webp';
 import Grill from '../assets/Packages/Meat/meat3.webp';
 
 // MiniDishes Meat
-import Chorizo from '../assets/Packages/Meat/grill-chorizo.webp';
 import AngusRibeye from '../assets/Packages/Meat/angus-ribeye.webp';
 import ChickenCordonBleu from '../assets/Packages/Meat/ChickenCordonBleu.webp';
 import ChickenCurry from '../assets/Packages/Meat/chickenCurry.webp';
-import ChickenSalad from '../assets/Packages/Meat/ChickenSalad.webp';
 import ChickenTikkaMasalaWithPotatoes from '../assets/Packages/Meat/MalasaPotatoes.webp';
 import FiletMignon from '../assets/Packages/Meat/filet-mignon.webp';
 import GrillChorizo from '../assets/Packages/Meat/grill-chorizo.webp';
@@ -51,12 +46,7 @@ import GrillLobster from '../assets/Packages/Meat/grill-lobster.webp';
 import GrillOctopus from '../assets/Packages/Meat/grill-octopus.webp';
 import GrillPork from '../assets/Packages/Meat/grill-pork.webp';
 import GrillSausage from '../assets/Packages/Meat/grill-sausage.webp';
-import GrilledLambChops from '../assets/Packages/Meat/grilled-lamb-chops.webp';
 import HerbRoastedChicken from '../assets/Packages/Meat/HerbChicken.webp';
-import MeatWall from '../assets/Packages/Meat/meat-wall.webp';
-import Meat from '../assets/Packages/Meat/meat.webp';
-import Meat2 from '../assets/Packages/Meat/meat2.webp';
-import Meat3 from '../assets/Packages/Meat/meat3.webp';
 import Mushroom from '../assets/Packages/Meat/mushroom.webp';
 import Wagyu from '../assets/Packages/Meat/Wagyu.webp';
 import Bistec from '../assets/Packages/Meat/luxury-bistec.webp';
@@ -114,9 +104,7 @@ import Pancakes from '../assets/Packages/Traditional/pancakes.webp';
 import Pinto from '../assets/Packages/Traditional/pinto.webp';
 import Pinto2 from '../assets/Packages/Traditional/pinto2.webp';
 import Platano from '../assets/Packages/Traditional/platano.webp';
-import Traditional from '../assets/Packages/Traditional/traditional.webp';
-import Traditional2 from '../assets/Packages/Traditional/traditional2.webp';
-import Traditional3 from '../assets/Packages/Traditional/traditional3.webp';
+import Footer from '../components/Footer';
 
 
 export default function Packages() {
@@ -230,6 +218,7 @@ export default function Packages() {
         <CardPackages key={index} {...card} />
       ))}
     </div>
+    <Footer />
     </>
   )
 }
