@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import ServiceCard from '../components/services/ServicesCard';
 import MyFullCalendar from '../components/services/MyFullCalendar';
 import '../index.css';
+import Footer from '../components/Footer';
 
 export default function Services() {
   const services = [
@@ -44,6 +45,7 @@ export default function Services() {
         </div>
       </div >
       <MyFullCalendar />
+      <Footer />
     </>
   );
 }

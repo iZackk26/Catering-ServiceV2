@@ -6,6 +6,7 @@ import { Button } from "flowbite-react";
 import Header from '../components/Header';
 
 import DeveloperCard from '../components/contact/DeveloperCard';
+import Footer from '../components/Footer';
 
 
 export default function Contact() {
@@ -45,6 +46,8 @@ export default function Contact() {
           ))}
         </div>
       </div> */}
+      
+      <Footer />
     </>
   );
 }
