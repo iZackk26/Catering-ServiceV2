@@ -162,7 +162,7 @@ export default function Packages() {
     {
       imageUrl: Veggie,
       imageAlt: "Vegetarian",
-      title: "Global Veggie Soups Green Gastronomy",
+      title: "Veggie Soups",
       description: "Offers a curated selection of flavorful international vegetarian soups. Ideal for any event seeking delicious, healthy options.",
       stars: 1,
       miniDishes: [CreamyTomatoe, RoastedButternut, VegetableMinestrone, CoconutCurry, CreamyMushrooms, SpicyBlackBean] 
