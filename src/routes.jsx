@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Packages from './pages/Packages';
+import About from './pages/About';
 
 // Formulario de Catering
 import CateringForm from './components/contact/CateringForm';
@@ -16,6 +17,7 @@ const Routing = () => (
         <Route path="/packages" element={<Packages />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/catering" element={<CateringForm />} />
+        <Route path="/about" element={<About />} />
         </Routes>
     </Router>
 
