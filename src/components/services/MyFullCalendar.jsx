@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import FullCalendar from '@fullcalendar/react';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import { Modal, Button, TextInput, Label, Checkbox } from 'flowbite-react';
+import React, { useState } from "react";
+import FullCalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import { Modal, Button, TextInput, Label, Checkbox } from "flowbite-react";
 
 const initialEvents = [
   {
@@ -12,7 +12,7 @@ const initialEvents = [
     package: "Sushi and Sashimi",
     booker: "Hector Caravaca",
     location: "Santa Clara",
-    additionalServices: ['Music', 'Decoration', 'Photography'],
+    additionalServices: ["Music", "Decoration", "Photography"],
   },
   {
     title: "Seafood Catering",
@@ -23,7 +23,7 @@ const initialEvents = [
     booker: "Josue Matamoros",
     location: "Chachagua",
     additionalServices: [],
-  }
+  },
 ];
 
 const MyFullCalendar = () => {
@@ -33,14 +33,14 @@ const MyFullCalendar = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [userView, setUserView] = useState(false);
   const [eventDetails, setEventDetails] = useState({
-    title: '',
-    start: '',
-    end: '',
-    package: '',
-    booker: '',
-    location: '',
+    title: "",
+    start: "",
+    end: "",
+    package: "",
+    booker: "",
+    location: "",
     additionalServices: [],
-    id: null
+    id: null,
   });
 
   const handleEventClick = ({ event }) => {
@@ -50,7 +50,7 @@ const MyFullCalendar = () => {
       title: event.title,
       start: event.start.toISOString().substring(0, 16),
       end: event.end.toISOString().substring(0, 16),
-      id: event.id
+      id: event.id,
     });
     setShowModal(true);
   };
@@ -60,7 +60,16 @@ const MyFullCalendar = () => {
   };
 
   const handleAddEvent = () => {
-    setEventDetails({ title: '', start: '', end: '', package: '', booker: '', location: '', additionalServices: [], id: null });
+    setEventDetails({
+      title: "",
+      start: "",
+      end: "",
+      package: "",
+      booker: "",
+      location: "",
+      additionalServices: [],
+      id: null,
+    });
     setEditModal(true);
   };
 
@@ -81,18 +90,22 @@ const MyFullCalendar = () => {
       },
     };
 
-    if (newEvent.id === null) {  // Add new event
+    if (newEvent.id === null) {
+      // Add new event
       newEvent.id = events.length + 1; // Assign an ID
       setEvents([...events, newEvent]);
-    } else {  // Update existing event
-      setEvents(events.map(event => event.id === newEvent.id ? newEvent : event));
+    } else {
+      // Update existing event
+      setEvents(
+        events.map((event) => (event.id === newEvent.id ? newEvent : event))
+      );
     }
     setEditModal(false);
     setShowModal(false);
   };
 
   const deleteEvent = () => {
-    setEvents(events.filter(event => event.id !== selectedEvent.id));
+    setEvents(events.filter((event) => event.id !== selectedEvent.id));
     setEditModal(false); // Close modal after deleting
   };
 
@@ -101,12 +114,14 @@ const MyFullCalendar = () => {
     if (index > -1) {
       setEventDetails({
         ...eventDetails,
-        additionalServices: eventDetails.additionalServices.filter(s => s !== service)
+        additionalServices: eventDetails.additionalServices.filter(
+          (s) => s !== service
+        ),
       });
     } else {
       setEventDetails({
         ...eventDetails,
-        additionalServices: [...eventDetails.additionalServices, service]
+        additionalServices: [...eventDetails.additionalServices, service],
       });
     }
   };
@@ -118,24 +133,23 @@ const MyFullCalendar = () => {
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
-        events={events.map(event => ({
+        events={events.map((event) => ({
           ...event,
-          title: event.title  
+          title: event.title,
         }))}
         headerToolbar={{
-          left: 'prev,next today',
-          center: 'title',
-          right: 'dayGridMonth,dayGridWeek,dayGridDay'
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,dayGridWeek,dayGridDay",
         }}
         eventClick={handleEventClick}
         fixedWeekCount={false} // No fija el número de semanas
         dayMaxEventRows={4} // Muestra hasta 3 eventos por día en la vista de mes
         views={{
           dayGridMonth: {
-            dayMaxEventRows: 3 // Limita el número de filas de días
-          }
+            dayMaxEventRows: 3, // Limita el número de filas de días
+          },
         }}
-        
       />
       <div className="flex justify-center my-4 gap-2">
         <Button color="info" onClick={toggleView}>
@@ -149,27 +163,50 @@ const MyFullCalendar = () => {
           </>
         )}
       </div>
-      
+
       {showModal && (
         <Modal show={showModal} onClose={() => setShowModal(false)}>
-          <Modal.Header>
-            Event Details
-          </Modal.Header>
+          <Modal.Header>Event Details</Modal.Header>
           <Modal.Body>
-            <p><strong>Title:</strong> {selectedEvent.title}</p>
-            <p><strong>Start:</strong> {selectedEvent.start.toDateString()} at {selectedEvent.start.toLocaleTimeString()}</p>
-            <p><strong>End:</strong> {selectedEvent.end.toDateString()} at {selectedEvent.end.toLocaleTimeString()}</p>
+            <p>
+              <strong>Title:</strong> {selectedEvent.title}
+            </p>
+            <p>
+              <strong>Start:</strong> {selectedEvent.start.toDateString()} at{" "}
+              {selectedEvent.start.toLocaleTimeString()}
+            </p>
+            <p>
+              <strong>End:</strong> {selectedEvent.end.toDateString()} at{" "}
+              {selectedEvent.end.toLocaleTimeString()}
+            </p>
             {!userView && (
               <>
-                <p><strong>Package:</strong> {selectedEvent.extendedProps.package}</p>
-                <p><strong>Booker:</strong> {selectedEvent.extendedProps.booker}</p>
-                <p><strong>Location:</strong> {selectedEvent.extendedProps.location}</p>
-                <p><strong>Additional Services:</strong>
-                  {serviceOptions.map((service, index) => (
-                    <Checkbox key={index} label={service} checked={selectedEvent.extendedProps.additionalServices.includes(service)} readOnly />
-                  ))}
+                <p>
+                  <strong>Package:</strong>{" "}
+                  {selectedEvent.extendedProps.package}
                 </p>
-
+                <p>
+                  <strong>Booker:</strong> {selectedEvent.extendedProps.booker}
+                </p>
+                <p>
+                  <strong>Location:</strong>{" "}
+                  {selectedEvent.extendedProps.location}
+                </p>
+                <p>
+                  <strong>Additional Services:</strong>
+                </p>
+                {serviceOptions.map((service, index) => (
+                  <div className="flex my-2 items-center">
+                    <Checkbox
+                      id={index}
+                      checked={eventDetails.additionalServices.includes(
+                        service
+                      )}
+                      onChange={() => toggleService(service)}
+                    />
+                    <label className="mx-2 text-sm">{service}</label>
+                  </div>
+                ))}
               </>
             )}
           </Modal.Body>
@@ -177,9 +214,17 @@ const MyFullCalendar = () => {
             <Button color="failure" onClick={() => setShowModal(false)}>
               Close
             </Button>
-            <Button color='warning' onClick={handleEditEvent}>
-              Edit Event
-            </Button>
+            {!userView && (
+              <>
+                <Button color="warning" onClick={handleEditEvent}>
+                  Edit Event
+                </Button>
+
+                <Button color="failure" onClick={deleteEvent}>
+                  Delete Event
+                </Button>
+              </>
+            )}
           </Modal.Footer>
         </Modal>
       )}
@@ -192,25 +237,59 @@ const MyFullCalendar = () => {
           <Modal.Body>
             <div>
               <Label>Title</Label>
-              <TextInput value={eventDetails.title} onChange={(e) => setEventDetails({...eventDetails, title: e.target.value})} />
+              <TextInput
+                value={eventDetails.title}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, title: e.target.value })
+                }
+              />
               <Label>Start</Label>
-              <TextInput type="datetime-local" value={eventDetails.start} onChange={(e) => setEventDetails({...eventDetails, start: e.target.value})} />
+              <TextInput
+                type="datetime-local"
+                value={eventDetails.start}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, start: e.target.value })
+                }
+              />
               <Label>End</Label>
-              <TextInput type="datetime-local" value={eventDetails.end} onChange={(e) => setEventDetails({...eventDetails, end: e.target.value})} />
+              <TextInput
+                type="datetime-local"
+                value={eventDetails.end}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, end: e.target.value })
+                }
+              />
               <Label>Package</Label>
-              <TextInput value={eventDetails.package} onChange={(e) => setEventDetails({...eventDetails, package: e.target.value})} />
+              <TextInput
+                value={eventDetails.package}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, package: e.target.value })
+                }
+              />
               <Label>Booker</Label>
-              <TextInput value={eventDetails.booker} onChange={(e) => setEventDetails({...eventDetails, booker: e.target.value})} />
+              <TextInput
+                value={eventDetails.booker}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, booker: e.target.value })
+                }
+              />
               <Label>Location</Label>
-              <TextInput value={eventDetails.location} onChange={(e) => setEventDetails({...eventDetails, location: e.target.value})} />
+              <TextInput
+                value={eventDetails.location}
+                onChange={(e) =>
+                  setEventDetails({ ...eventDetails, location: e.target.value })
+                }
+              />
               <Label>Additional Services</Label>
-              {serviceOptions.map(service => (
-                <Checkbox
-                  key={service}
-                  label={service}
-                  checked={eventDetails.additionalServices.includes(service)}
-                  onChange={() => toggleService(service)}
-                />
+              {serviceOptions.map((service, index) => (
+                <div className="flex my-2 items-center">
+                  <Checkbox
+                    id={index}
+                    checked={eventDetails.additionalServices.includes(service)}
+                    onChange={() => toggleService(service)}
+                  />
+                  <label className="mx-2 text-sm">{service}</label>
+                </div>
               ))}
             </div>
           </Modal.Body>
