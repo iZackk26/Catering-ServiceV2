@@ -5,7 +5,6 @@ import Header from '../components/Header';
 import FAQ from '../components/FAQ';
 
 import Image from '../assets/About/chef.webp';
-import Icon from '../assets/About/cocinero.png';
 
 
 const AboutUs = () => {
