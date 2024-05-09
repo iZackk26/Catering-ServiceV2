@@ -4,8 +4,9 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import FAQ from '../components/FAQ';
 
-import Image from '../assets/About/chef.webp';
-import Icon from '../assets/About/cocinero.png';
+//import Image from '../assets/About/chef.webp';
+import Image from '../assets/Packages/Seafood/sea-food3.webp'
+//import Icon from '../assets/About/cocinero.png';
 
 
 const AboutUs = () => {
