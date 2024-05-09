@@ -105,7 +105,7 @@ import Pinto from '../assets/Packages/Traditional/pinto.webp';
 import Pinto2 from '../assets/Packages/Traditional/pinto2.webp';
 import Platano from '../assets/Packages/Traditional/platano.webp';
 import Footer from '../components/Footer';
-
+import SearchPackage from '../components/Search';
 
 export default function Packages() {
   const cardsData = [
@@ -213,11 +213,9 @@ export default function Packages() {
   return (
     <>
     <Header />
-    <div className='px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-      {cardsData.map((card, index) => (
-        <CardPackages key={index} {...card} />
-      ))}
-    </div>
+
+    <SearchPackage data={cardsData} />
+    
     <Footer />
     </>
   )
