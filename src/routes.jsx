@@ -6,9 +6,9 @@ import Contact from './pages/Contact';
 import Packages from './pages/Packages';
 import PackagesDetail from './pages/PackageDetail';
 import About from './pages/About';
-
-// Formulario de Catering
 import CateringForm from './components/contact/CateringForm';
+import Book from './pages/Book';
+
 
 const Routing = () => (
     <Router>
@@ -20,6 +20,7 @@ const Routing = () => (
         <Route path="/contact" element={<Contact />} />
         <Route path="/catering" element={<CateringForm />} />
         <Route path="/about" element={<About />} />
+        <Route path="/book" element={<Book />} />
         </Routes>
     </Router>
 

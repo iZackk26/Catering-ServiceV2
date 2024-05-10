@@ -3,8 +3,9 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import { Modal, Button, TextInput, Label, Checkbox } from "flowbite-react";
 
-const initialEvents = [
-  {
+
+const initialEvents = {
+  1: {
     title: "Seafood Catering",
     start: new Date("2024-04-28T10:00:00"),
     end: new Date("2024-04-28T12:00:00"),
@@ -14,7 +15,7 @@ const initialEvents = [
     location: "Santa Clara",
     additionalServices: ["Music", "Decoration", "Photography"],
   },
-  {
+  2: {
     title: "Seafood Catering",
     start: new Date("2024-04-29T10:00:00"),
     end: new Date("2024-04-29T12:00:00"),
@@ -24,7 +25,7 @@ const initialEvents = [
     location: "Chachagua",
     additionalServices: [],
   },
-  {
+  3: {
     title: "Meat Catering",
     start: new Date("2024-04-30T10:00:00"),
     end: new Date("2024-04-30T12:00:00"),
@@ -34,7 +35,7 @@ const initialEvents = [
     location: "San Ramon",
     additionalServices: ["Music", "Photography"],
   },
-  {
+  4: {
     title: "Meat Catering",
     start: new Date("2024-05-01T10:00:00"),
     end: new Date("2024-05-01T12:00:00"),
@@ -44,7 +45,7 @@ const initialEvents = [
     location: "San Carlos",
     additionalServices: ["Decoration", "Photography"],
   },
-  {
+  5: {
     title: "Vegetarian Catering",
     start: new Date("2024-05-02T10:00:00"),
     end: new Date("2024-05-02T12:00:00"),
@@ -54,7 +55,7 @@ const initialEvents = [
     location: "Alajuela",
     additionalServices: ["Music", "Decoration"],
   },
-  {
+  6: {
     title: "Vegetarian Catering",
     start: new Date("2024-05-03T10:00:00"),
     end: new Date("2024-05-03T12:00:00"),
@@ -64,7 +65,7 @@ const initialEvents = [
     location: "Santa Rosa de Pocosol",
     additionalServices: ["Decoration", "Photography", "Animation"],
   },
-  {
+  7: {
     title: "Traditional Catering",
     start: new Date("2024-05-04T10:00:00"),
     end: new Date("2024-05-04T12:00:00"),
@@ -74,7 +75,7 @@ const initialEvents = [
     location: "Pital",
     additionalServices: [],
   },
-  {
+  8: {
     title: "Traditional Catering",
     start: new Date("2024-05-05T10:00:00"),
     end: new Date("2024-05-05T12:00:00"),
@@ -83,9 +84,9 @@ const initialEvents = [
     booker: "Andrés Esquivel",
     dishes: ["Pinto", "Tamales", "Pozol", "Ceviche"],
     location: "Los Ángeles de la Fortuna",
-    additionalServices: ["Music","Photography"],
+    additionalServices: ["Music", "Photography"],
   },
-  {
+  9: {
     title: "Traditional Catering",
     start: new Date("2024-05-06T10:00:00"),
     end: new Date("2024-05-06T12:00:00"),
@@ -96,7 +97,7 @@ const initialEvents = [
     location: "Los Chiles",
     additionalServices: ["Photography"],
   },
-  {
+  10: {
     title: "Traditional Catering",
     start: new Date("2024-05-07T10:00:00"),
     end: new Date("2024-05-07T12:00:00"),
@@ -106,8 +107,9 @@ const initialEvents = [
     dishes: ["Gallo Pinto", "Casado de Bistec", "Horchata"],
     location: "Santa Clara",
     additionalServices: [],
-  }
-];
+  },
+};
+
 
 const MyFullCalendar = () => {
   const [events, setEvents] = useState(initialEvents);
@@ -125,21 +127,21 @@ const MyFullCalendar = () => {
     additionalServices: [],
     id: null,
   });
-
-  const handleEventClick = ({ event }) => {
-    setSelectedEvent(event);
-    setEventDetails({
-      ...event.extendedProps,
-      title: event.title,
-      start: event.start.toISOString().substring(0, 16),
-      end: event.end.toISOString().substring(0, 16),
-      id: event.id,
-    });
-    setShowModal(true);
-  };
-
+  
   const toggleView = () => {
     setUserView(!userView);
+  };
+
+  const handleEventClick = ({ event }) => {
+    const eventInfo = events[event.id];
+    setSelectedEvent(eventInfo);
+    setEventDetails({
+      ...eventInfo,
+      start: eventInfo.start.toISOString().substring(0, 16),
+      end: eventInfo.end.toISOString().substring(0, 16),
+      id: eventInfo.id,
+    });
+    setShowModal(true);
   };
 
   const handleAddEvent = () => {
@@ -161,65 +163,58 @@ const MyFullCalendar = () => {
   };
 
   const saveEvent = () => {
+    const { id, ...eventInfo } = eventDetails;
     const newEvent = {
-      ...eventDetails,
-      start: eventDetails.start,
-      end: eventDetails.end,
-      extendedProps: {
-        package: eventDetails.package,
-        booker: eventDetails.booker,
-        location: eventDetails.location,
-        additionalServices: eventDetails.additionalServices,
-      },
+      ...eventInfo,
+      start: new Date(eventDetails.start),
+      end: new Date(eventDetails.end),
     };
 
-    if (newEvent.id === null) {
-      // Add new event
-      newEvent.id = events.length + 1; // Assign an ID
-      setEvents([...events, newEvent]);
+    if (id === null) {
+      const newId = Object.keys(events).length + 1;
+      setEvents({
+        ...events,
+        [newId]: { ...newEvent, id: newId },
+      });
     } else {
-      // Update existing event
-      setEvents(
-        events.map((event) => (event.id === newEvent.id ? newEvent : event))
-      );
+      setEvents({
+        ...events,
+        [id]: { ...newEvent, id },
+      });
     }
     setEditModal(false);
     setShowModal(false);
   };
 
   const deleteEvent = () => {
-    setEvents(events.filter((event) => event.id !== selectedEvent.id));
-    setEditModal(false); // Close modal after deleting
+    const updatedEvents = { ...events };
+    delete updatedEvents[selectedEvent.id];
+    setEvents(updatedEvents);
+    setShowModal(false);
   };
 
   const toggleService = (service) => {
-    const index = eventDetails.additionalServices.indexOf(service);
-    if (index > -1) {
-      setEventDetails({
-        ...eventDetails,
-        additionalServices: eventDetails.additionalServices.filter(
-          (s) => s !== service
-        ),
-      });
-    } else {
-      setEventDetails({
-        ...eventDetails,
-        additionalServices: [...eventDetails.additionalServices, service],
-      });
-    }
+    const services = eventDetails.additionalServices.includes(service)
+      ? eventDetails.additionalServices.filter((s) => s !== service)
+      : [...eventDetails.additionalServices, service];
+    setEventDetails({ ...eventDetails, additionalServices: services });
   };
 
   const serviceOptions = ["Music", "Decoration", "Photography"];
+
+  const renderEventsForCalendar = () => Object.values(events).map(event => ({
+    ...event,
+    title: event.title,
+    start: event.start,
+    end: event.end,
+  }));
 
   return (
     <div className="p-4 mx-auto max-w-6xl">
       <FullCalendar
         plugins={[dayGridPlugin]}
         initialView="dayGridMonth"
-        events={events.map((event) => ({
-          ...event,
-          title: event.title,
-        }))}
+        events={renderEventsForCalendar()}
         headerToolbar={{
           left: "prev,next today",
           center: "title",
@@ -233,20 +228,19 @@ const MyFullCalendar = () => {
             dayMaxEventRows: 3, // Limita el número de filas de días
           },
         }}
+
       />
       <div className="flex justify-center my-4 gap-2">
         <Button color="info" onClick={toggleView}>
           {userView ? "Switch to Admin View" : "Switch to User View"}
         </Button>
         {!userView && (
-          <>
-            <Button color="success" onClick={handleAddEvent}>
-              Add Event
-            </Button>
-          </>
+          <Button color="success" onClick={handleAddEvent}>
+            Add Event
+          </Button>
         )}
       </div>
-
+  
       {showModal && (
         <Modal show={showModal} onClose={() => setShowModal(false)}>
           <Modal.Header>Event Details</Modal.Header>
@@ -255,36 +249,31 @@ const MyFullCalendar = () => {
               <strong>Title:</strong> {selectedEvent.title}
             </p>
             <p>
-              <strong>Start:</strong> {selectedEvent.start.toDateString()} at{" "}
-              {selectedEvent.start.toLocaleTimeString()}
+              <strong>Start:</strong> {new Date(selectedEvent.start).toDateString()} at{" "}
+              {new Date(selectedEvent.start).toLocaleTimeString()}
             </p>
             <p>
-              <strong>End:</strong> {selectedEvent.end.toDateString()} at{" "}
-              {selectedEvent.end.toLocaleTimeString()}
+              <strong>End:</strong> {new Date(selectedEvent.end).toDateString()} at{" "}
+              {new Date(selectedEvent.end).toLocaleTimeString()}
             </p>
             {!userView && (
               <>
                 <p>
-                  <strong>Package:</strong>{" "}
-                  {selectedEvent.extendedProps.package}
+                  <strong>Package:</strong> {selectedEvent.package}
                 </p>
                 <p>
-                  <strong>Booker:</strong> {selectedEvent.extendedProps.booker}
+                  <strong>Booker:</strong> {selectedEvent.booker}
                 </p>
                 <p>
-                  <strong>Location:</strong>{" "}
-                  {selectedEvent.extendedProps.location}
+                  <strong>Location:</strong> {selectedEvent.location}
                 </p>
                 <p>
                   <strong>Additional Services:</strong>
                 </p>
                 {serviceOptions.map((service, index) => (
-                  <div className="flex my-2 items-center">
+                  <div key={index} className="flex my-2 items-center">
                     <Checkbox
-                      id={index}
-                      checked={eventDetails.additionalServices.includes(
-                        service
-                      )}
+                      checked={selectedEvent.additionalServices.includes(service)}
                       onChange={() => toggleService(service)}
                     />
                     <label className="mx-2 text-sm">{service}</label>
@@ -302,7 +291,6 @@ const MyFullCalendar = () => {
                 <Button color="warning" onClick={handleEditEvent}>
                   Edit Event
                 </Button>
-
                 <Button color="failure" onClick={deleteEvent}>
                   Delete Event
                 </Button>
@@ -311,7 +299,7 @@ const MyFullCalendar = () => {
           </Modal.Footer>
         </Modal>
       )}
-
+  
       {editModal && (
         <Modal show={editModal} onClose={() => setEditModal(false)}>
           <Modal.Header>
@@ -365,9 +353,8 @@ const MyFullCalendar = () => {
               />
               <Label>Additional Services</Label>
               {serviceOptions.map((service, index) => (
-                <div className="flex my-2 items-center">
+                <div key={index} className="flex my-2 items-center">
                   <Checkbox
-                    id={index}
                     checked={eventDetails.additionalServices.includes(service)}
                     onChange={() => toggleService(service)}
                   />
@@ -385,6 +372,7 @@ const MyFullCalendar = () => {
       )}
     </div>
   );
+  
 };
 
 export default MyFullCalendar;
