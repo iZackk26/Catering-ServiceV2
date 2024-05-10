@@ -3,7 +3,7 @@ import { Card } from 'flowbite-react';
 
 const ServiceCard = ({ title, description, features }) => {
   return (
-    <Card className="flex flex-col h-full border border-gray-200 rounded-lg shadow-md max-w-sm">
+    <Card className="flex flex-col h-full border border-gray-200 rounded-lg shadow-md max-w-sm" data-aos="zoom-in">
       <div className="p-5 border-b border-gray-200">
         <h1 className="text-2xl font-semibold text-gray-700 text-center">{title}</h1>
       </div>

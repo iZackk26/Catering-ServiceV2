@@ -1,0 +1,147 @@
+[
+    {
+        "id": 1,
+        "nombre": "Seafood Package",
+        "platillos": [
+            {
+                "nombre": "Grilled Lobster",
+                "precio": 35,
+                "descripcion": "Delicious fresh lobster grilled with herb butter, accompanied by a side of roasted vegetables and wild rice.",
+                "image": "../src/assets/Packages/Seafood/grilled-lobster.webp"
+            },
+            {
+                "nombre": "Shrimp and Pineapple Skewers",
+                "precio": 25,
+                "descripcion": "Juicy shrimp marinated with chunks of pineapple, grilled to perfection, and served with a mango and cilantro sauce.",
+                "image": "../src/assets/Packages/Seafood/shrim-pineapple-skewers.webp"
+            },
+            {
+                "nombre": "White Fish Ceviche",
+                "precio": 15,
+                "descripcion": "Fresh white fish marinated in lime with red onion, cilantro, tomato, and avocado.",
+                "image": "../src/assets/Packages/Seafood/ceviche.webp"
+            },
+            {
+                "nombre": "Honey Mustard Glazed Salmon",
+                "precio": 30,
+                "descripcion": "Fresh salmon fillet roasted and glazed with a sweet mixture of honey and mustard.",
+                "image": "../src/assets/Packages/Seafood/salmon.webp"
+            },
+            {
+                "nombre": "Seafood Paella",
+                "precio": 24,
+                "descripcion": "Traditional Spanish dish of rice cooked with a variety of seafood.",
+                "image": "../src/assets/Packages/Seafood/paella.webp"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "nombre": "Sushi Package",
+        "platillos": [
+            {
+                "nombre": "Nigiri Sushi",
+                "precio": 40,
+                "descripcion": "Indulge in tender fish and seasoned rice.",
+                "image": "../src/assets/Packages/Seafood/nigiri.webp"
+            },
+            {
+                "nombre": "Seafood Okonomiyaki",
+                "precio": 15,
+                "descripcion": "Succulent shrimp, octopus, and squid in a golden-brown pancake.",
+                "image": "../src/assets/Packages/Seafood/okonomiyaki.webp"
+            },
+            {
+                "nombre": "Fish Donburi",
+                "precio": 20,
+                "descripcion": "Fresh fish slices delicately cooked, atop steamed rice.",
+                "image": "../src/assets/Packages/Seafood/fish-donburi.webp"
+            },
+            {
+                "nombre": "Seafood Udon",
+                "precio": 10,
+                "descripcion": "Thick wheat noodles in a broth with fresh seafood.",
+                "image": "../src/assets/Packages/Seafood/udon.webp"
+            },
+            {
+                "nombre": "Sashimi",
+                "precio": 30,
+                "descripcion": "Thinly sliced raw fish, served with soy sauce and wasabi.",
+                "image": "../src/assets/Packages/Seafood/sashimi.webp"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "nombre": "Fisherman's Feast Package",
+        "platillos": [
+            {
+                "nombre": "Grilled Fish Fillet",
+                "precio": 12,
+                "descripcion": "Grilled fish served with rice and a green salad.",
+                "image": "../src/assets/Packages/Seafood/GrilledFishFillet.webp"
+            },
+            {
+                "nombre": "Baked Salmon",
+                "precio": 30,
+                "descripcion": "Fresh salmon baked to perfection with asparagus.",
+                "image": "../src/assets/Packages/Seafood/Baked-Salmon.webp"
+            },
+            {
+                "nombre": "Golden Crispy Tilapia",
+                "precio": 14,
+                "descripcion": "Crispy fried tilapia served with a fluffy pancake.",
+                "image": "../src/assets/Packages/Seafood/Tilapia-Golden.webp"
+            },
+            {
+                "nombre": "Tempura",
+                "precio": 15,
+                "descripcion": "Lightly battered seafood or vegetables, fried and served with dipping sauce.",
+                "image": "../src/assets/Packages/Seafood/tempura.webp"
+            },
+            {
+                "nombre": "Sabalo Supreme",
+                "precio": 40,
+                "descripcion": "Freshly caught sabalo, fried to golden perfection.",
+                "image": "../src/assets/Packages/Seafood/savalo-supreme.webp"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "nombre": "Luxury Classic Package",
+        "platillos": [
+            {
+                "nombre": "Filet Mignon with Truffle Mashed Potatoes",
+                "precio": 40,
+                "descripcion": "Juicy filet mignon with creamy truffle-infused mashed potatoes.",
+                "image": "../src/assets/Packages/Seafood/filet-mignon.webp"
+            },
+            {
+                "nombre": "Grilled Lamb Chops with Wild Mushroom Risotto",
+                "precio": 35,
+                "descripcion": "Grilled lamb chops served with creamy risotto and mushrooms.",
+                "images": "../src/assets/Packages/Seafood/grilled-lamb-chops.wepb"
+                
+            },
+            {
+                "nombre": "Luxury Bistec",
+                "precio": 45,
+                "descripcion": "A luxurious cut of beef, served with a side of roasted vegetables.",
+                "image": "../src/assets/Packages/Seafood/luxury-bistec.webp"
+            },
+            {
+                "nombre": "Wagyu Beef",
+                "precio": 30,
+                "descripcion": "The finest cut of beef, grilled to perfection and served with a side of mashed potatoes.",
+                "image": "../src/assets/Packages/Seafood/tomahawk.webp"
+            },
+            {
+                "nombre": "Surf and Turf",
+                "precio": 22,
+                "descripcion": "A combination of seafood and steak, served with a side of roasted vegetables.",
+                "image": "../src/assets/Packages/Seafood/wagyu.webp"
+            }
+        ]
+    }
+]

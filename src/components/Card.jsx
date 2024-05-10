@@ -8,7 +8,7 @@ import MiniDish from './MiniDish';
 function CardPackages({ imageUrl, imageAlt, title, description, stars, miniDishes, id }) {
   return (
     <Link to={`/packages/${id}`} className="no-underline">
-      <Card className="max-w-sm w-full lg:max-w-full lg:flex border-none">
+      <Card className="max-w-sm w-full lg:max-w-full lg:flex border-none" data-aos="fade-up">
         <img src={imageUrl} alt={imageAlt} width={350} height={350} className="w-full h-auto object-cover rounded-lg" />
         <div className="p-5">
           <div className="flex justify-between items-center mb-4">
