@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 // Components
 import Header from '../components/Header'
 import CardPackages from '../components/Card';
+import Footer from '../components/Footer';
+import SearchPackage from '../components/Search';
+
 
 // Seafood
 import Lobster from '../assets/Packages/Seafood/sea-food.webp';
@@ -105,8 +108,6 @@ import Pancakes from '../assets/Packages/Traditional/pancakes.webp';
 import Pinto from '../assets/Packages/Traditional/pinto.webp';
 import Pinto2 from '../assets/Packages/Traditional/pinto2.webp';
 import Platano from '../assets/Packages/Traditional/platano.webp';
-import Footer from '../components/Footer';
-
 
 export default function Packages() {
   const cardsData = [
@@ -226,12 +227,10 @@ export default function Packages() {
   return (
     <>
     <Header />
-    <div className='px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
-      {cardsData.map((card) => (
-      <CardPackages key={card.id} {...card} />
-      ))}
-    </div>
+    
+    <SearchPackage data={cardsData} />
+    
     <Footer />
     </>
-  )
+  );
 }
