@@ -2,9 +2,29 @@ import React, { useState } from "react";
 import { Label, TextInput } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { FaPhoneAlt } from "react-icons/fa";
-import PackageItem from "../components/packages/PackageItem"; // Ruta actualizada
-import Lobster from '../assets/Packages/Seafood/sea-food.webp'; // Asegúrate de que la ruta es correcta
+import PackageItem from "../components/packages/PackageItem";
 import { Link } from "react-router-dom";
+
+// Import images for packages
+// seafood
+import Lobster from '../assets/Packages/Seafood/sea-food.webp';
+import Sushi from '../assets/Packages/Seafood/sea-food2.webp';
+import Fish from '../assets/Packages/Seafood/sea-food3.webp';
+
+// meat
+import LuxuryClassics from '../assets/Packages/Meat/meat.webp';
+import Tour from '../assets/Packages/Meat/meat2.webp';
+import Grill from '../assets/Packages/Meat/meat3.webp';
+
+// Vegetarian
+import Veggie from '../assets/Packages/Vegetarian/vegetarian2.webp';
+import GreenGastronomy from '../assets/Packages/Vegetarian/vegetarian.webp';
+import GardenDelights from '../assets/Packages/Vegetarian/vegetarian3.webp';
+
+// Traditional
+import Caribbean from '../assets/Packages/Traditional/traditional.webp';
+import SunriseTico from '../assets/Packages/Traditional/traditional2.webp';
+import BreadRama from '../assets/Packages/Traditional/traditional3.webp';
 
 const Book = () => {
   const [customOption, setCustomOption] = useState(false);
@@ -37,6 +57,18 @@ const Book = () => {
     setCustomOption(!customOption);
   };
 
+  const [showAlert, setShowAlert] = useState(false);
+
+  const handleSendRequest = (event) => {
+    event.preventDefault();
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+      window.location.href = '/';
+    }, 5000);
+    
+  };
+
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-50">
       <div className="p-4 border border-gray-300 shadow-lg bg-white rounded-lg w-full max-w-screen-lg flex flex-col">
@@ -63,10 +95,18 @@ const Book = () => {
 
         {/* Package List Always Visible */}
         <div className="mb-4">
-          <PackageItem name="Mariscada Tropical" imageSrc={Lobster} />
-          <PackageItem name="Paella Marinera" imageSrc={Lobster} />
-          <PackageItem name="Camarones al Ajillo" imageSrc={Lobster} />
-          <PackageItem name="Lobster Roll" imageSrc={Lobster} />
+          <PackageItem name="Fresh Ocean" imageSrc={Lobster} />
+          <PackageItem name="Sea Delights" imageSrc={Sushi} />
+          <PackageItem name="Fisherman's Feast" imageSrc={Fish} />
+          <PackageItem name="Luxury Classics" imageSrc={LuxuryClassics} />
+          <PackageItem name="Global Tour" imageSrc={Tour} />
+          <PackageItem name="Grill Party" imageSrc={Grill} />
+          <PackageItem name="Veggie Soups" imageSrc={Veggie} />
+          <PackageItem name="Green Gastronomy" imageSrc={GreenGastronomy} />
+          <PackageItem name="Garden Delights" imageSrc={GardenDelights} />
+          <PackageItem name="Caribbean Flavors" imageSrc={Caribbean} />
+          <PackageItem name="Sunrise Tico" imageSrc={SunriseTico} />
+          <PackageItem name="Bread Rama" imageSrc={BreadRama} />
         </div>
 
         {/* Button to Toggle Custom Option */}
@@ -98,7 +138,7 @@ const Book = () => {
                 </div>
               </div>
             )}
-            {selectedDishes.length && (
+            {selectedDishes.length > 0 && (
               <div>
                 <Label value="Selected Dishes" />
                 <ul className="list-disc pl-5">
@@ -114,9 +154,20 @@ const Book = () => {
           </div>
         )}
         {/* Send button */}
-        <Link to="/" className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded self-end">  <button>
-          Send Catering Request
-        </button></Link>
+        <Link to="/" className="mt-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded self-end">
+          <button
+              onClick={handleSendRequest}
+            >
+            Send Catering Request
+          </button>
+        </Link>
+        {showAlert && (
+          <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-4 bg-white shadow-lg rounded-lg">
+            <p>Your order has been confirmed,</p>
+            <p>thank you very much for choosing us,</p>
+            <p>have a great day.</p>
+          </div>
+        )}
       </div>
     </div>
   );
