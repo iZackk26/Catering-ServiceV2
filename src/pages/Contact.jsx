@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from "flowbite-react";
-
+import { Button, TextInput, Textarea } from "flowbite-react";
 // Components
 import Header from '../components/Header';
 
@@ -31,20 +30,46 @@ export default function Contact() {
   return (
     <>
       <Header />
-      
-      <div className="flex justify-center mt-5">
-      <Link to="/catering"> <Button gradientDuoTone="greenToBlue">Contact us</Button></Link>
-      </div>
-      
-      {/* <div className="container mx-auto mt-5 px-4">
-        <h2 className="text-center mb-4">Contact Our Developers</h2>
-        <div className="flex justify-around flex-nowrap items-center gap-4">
-          {developers.map(dev => (
-            <DeveloperCard key={dev.username} {...dev} />
-          ))}
+
+      <div className="container mx-auto mt-10 px-4">
+        <h1 className="text-2xl font-bold text-center mb-6">Contacto</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="space-y-4">
+            <h2 className="text-xl font-semibold">Envíanos un mensaje</h2>
+            <TextInput
+              id="name"
+              type="text"
+              placeholder="Tu nombre"
+              required={true}
+              shadow={true}
+            />
+            <TextInput
+              id="email"
+              type="email"
+              placeholder="Tu correo electrónico"
+              required={true}
+              shadow={true}
+            />
+            <Textarea
+              id="message"
+              placeholder="Tu mensaje"
+              required={true}
+              rows={6}
+              shadow={true}
+            />
+            <Button gradientDuoTone="greenToBlue">Enviar Mensaje</Button>
+          </div>
+          <div className="space-y-4 ml-2 mt-4">
+            <h2 className="text-xl font-semibold">O contáctanos directamente</h2>
+            <p>Puedes llamarnos al: <a href="tel:+1234567890" className="text-blue-600 hover:underline">+911</a></p>
+            <p>O envíanos un correo: <a href="mailto:contacto@catering.com" className="text-blue-600 hover:underline">RoyalCatering@catering.com</a></p>
+            <Link to="/catering">
+              <Button gradientDuoTone="purpleToBlue">Ver Servicios</Button>
+            </Link>
+          </div>
         </div>
-      </div> */}
-      
+      </div>
+
       <Footer />
     </>
   );
