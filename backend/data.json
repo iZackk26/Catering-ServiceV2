@@ -115,32 +115,367 @@
                 "nombre": "Filet Mignon with Truffle Mashed Potatoes",
                 "precio": 40,
                 "descripcion": "Juicy filet mignon with creamy truffle-infused mashed potatoes.",
-                "image": "../src/assets/Packages/Seafood/filet-mignon.webp"
+                "image": "../src/assets/Packages/Meat/filet-mignon.webp"
             },
             {
                 "nombre": "Grilled Lamb Chops with Wild Mushroom Risotto",
                 "precio": 35,
                 "descripcion": "Grilled lamb chops served with creamy risotto and mushrooms.",
-                "images": "../src/assets/Packages/Seafood/grilled-lamb-chops.wepb"
-                
+                "images": "../src/assets/Packages/Meat/grilled-lamb.webp"
             },
             {
                 "nombre": "Luxury Bistec",
                 "precio": 45,
                 "descripcion": "A luxurious cut of beef, served with a side of roasted vegetables.",
-                "image": "../src/assets/Packages/Seafood/luxury-bistec.webp"
+                "image": "../src/assets/Packages/Meat/luxury-bistec.webp"
             },
             {
                 "nombre": "Wagyu Beef",
                 "precio": 30,
                 "descripcion": "The finest cut of beef, grilled to perfection and served with a side of mashed potatoes.",
-                "image": "../src/assets/Packages/Seafood/tomahawk.webp"
+                "image": "../src/assets/Packages/Meat/tomahawk.webp"
             },
             {
                 "nombre": "Surf and Turf",
                 "precio": 22,
-                "descripcion": "A combination of seafood and steak, served with a side of roasted vegetables.",
-                "image": "../src/assets/Packages/Seafood/wagyu.webp"
+                "descripcion": "A combination of Meat and steak, served with a side of roasted vegetables.",
+                "image": "../src/assets/Packages/Meat/wagyu.webp"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "nombre": "Global Tour",
+        "platillos": [
+            {
+                "nombre": "Luxury Classics",
+                "precio": 50,
+                "descripcion": "A luxurious assortment of globally inspired dishes.",
+                "image": "../src/assets/Packages/Meat/meat.webp"
+            },
+            {
+                "nombre": "Tour",
+                "precio": 45,
+                "descripcion": "A tour through world flavors with a selection of international dishes.",
+                "image": "../src/assets/Packages/Meat/meat2.webp"
+            },
+            {
+                "nombre": "Grill",
+                "precio": 40,
+                "descripcion": "A variety of grilled meats and vegetables showcasing different global grilling techniques.",
+                "image": "../src/assets/Packages/Meat/meat3.webp"
+            },
+            {
+                "nombre": "Angus Ribeye",
+                "precio": 55,
+                "descripcion": "Premium Angus ribeye, grilled to perfection.",
+                "image": "../src/assets/Packages/Meat/angus-ribeye.webp"
+            },
+            {
+                "nombre": "Wagyu",
+                "precio": 60,
+                "descripcion": "Exquisite Wagyu beef with a delicate flavor and tender texture.",
+                "image": "../src/assets/Packages/Meat/Wagyu.webp"
+            },
+            {
+                "nombre": "Bistec",
+                "precio": 35,
+                "descripcion": "Luxurious steak cooked to your liking.",
+                "image": "../src/assets/Packages/Meat/luxury-bistec.webp"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "nombre": "Grill Party",
+        "platillos": [
+            {
+                "nombre": "Grill Chorizo",
+                "precio": 20,
+                "descripcion": "Spicy and flavorful grilled chorizo.",
+                "image": "../src/assets/Packages/Meat/grill-chorizo.webp"
+            },
+            {
+                "nombre": "Grill Duck",
+                "precio": 30,
+                "descripcion": "Perfectly grilled duck with a crispy skin.",
+                "image": "../src/assets/Packages/Meat/grill-duck.webp"
+            },
+            {
+                "nombre": "Grill Lobster",
+                "precio": 45,
+                "descripcion": "Fresh lobster grilled with fine herbs.",
+                "image": "../src/assets/Packages/Meat/grill-lobster.webp"
+            },
+            {
+                "nombre": "Grill Octopus",
+                "precio": 25,
+                "descripcion": "Tender octopus grilled with Mediterranean spices.",
+                "image": "../src/assets/Packages/Meat/grill-octopus.webp"
+            },
+            {
+                "nombre": "Grill Pork",
+                "precio": 22,
+                "descripcion": "Juicy pork ribs barbecued with a homemade glaze.",
+                "image": "../src/assets/Packages/Meat/grill-pork.webp"
+            },
+            {
+                "nombre": "Grill Sausage",
+                "precio": 18,
+                "descripcion": "A selection of artisan grilled sausages.",
+                "image": "../src/assets/Packages/Meat/grill-sausage.webp"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "nombre": "Global Veggie Soups",
+        "platillos": [
+            {
+                "nombre": "Green Gastronomy",
+                "precio": 15,
+                "descripcion": "A hearty green soup made with fresh, seasonal vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/vegetarian.webp"
+            },
+            {
+                "nombre": "Garden Delights",
+                "precio": 14,
+                "descripcion": "A delicious medley of garden vegetables in a warming broth.",
+                "image": "../src/assets/Packages/Vegetarian/vegetarian3.webp"
+            },
+            {
+                "nombre": "Vegetable Minestrone",
+                "precio": 12,
+                "descripcion": "Classic Italian minestrone with a variety of vegetables and pasta.",
+                "image": "../src/assets/Packages/Vegetarian/vegetable-minestrone.webp"
+            },
+            {
+                "nombre": "Coconut Curry",
+                "precio": 16,
+                "descripcion": "Rich and creamy coconut curry loaded with vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/coconut-curry.webp"
+            },
+            {
+                "nombre": "Creamy Mushrooms",
+                "precio": 14,
+                "descripcion": "A rich and creamy soup made with a variety of mushrooms.",
+                "image": "../src/assets/Packages/Vegetarian/creamy-mushrooms.webp"
+            },
+            {
+                "nombre": "Creamy Tomato",
+                "precio": 10,
+                "descripcion": "Smooth tomato soup with a touch of cream for richness.",
+                "image": "../src/assets/Packages/Vegetarian/creamy-tomatoe.webp"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "nombre": "Green Gastronomy",
+        "platillos": [
+            {
+                "nombre": "Green Gastronomy",
+                "precio": 15,
+                "descripcion": "A delightful dish showcasing the best of green vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/vegetarian.webp"
+            },
+            {
+                "nombre": "Garden Delights",
+                "precio": 14,
+                "descripcion": "A fresh and vibrant selection of garden vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/vegetarian3.webp"
+            },
+            {
+                "nombre": "Mediterranean Salad",
+                "precio": 13,
+                "descripcion": "A colorful salad with Mediterranean flavors.",
+                "image": "../src/assets/Packages/Vegetarian/mediterranean-salad.webp"
+            },
+            {
+                "nombre": "Rainbow Quinoa",
+                "precio": 12,
+                "descripcion": "Nutritious quinoa salad with a rainbow of vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/rainbow-quinoa.webp"
+            },
+            {
+                "nombre": "Roasted Beet",
+                "precio": 11,
+                "descripcion": "Oven-roasted beets served with a balsamic reduction.",
+                "image": "../src/assets/Packages/Vegetarian/roasted-beet.webp"
+            },
+            {
+                "nombre": "Roasted Butternut",
+                "precio": 12,
+                "descripcion": "Sweet roasted butternut squash seasoned with spices.",
+                "image": "../src/assets/Packages/Vegetarian/roasted-butternut.webp"
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "nombre": "Garden Delights",
+        "platillos": [
+            {
+                "nombre": "Garden Delights",
+                "precio": 14,
+                "descripcion": "A delightful platter of the freshest produce from the garden.",
+                "image": "../src/assets/Packages/Vegetarian/vegetarian3.webp"
+            },
+            {
+                "nombre": "Falafel Salad",
+                "precio": 12,
+                "descripcion": "Crispy falafel served over a fresh salad with tahini dressing.",
+                "image": "../src/assets/Packages/Vegetarian/falafel-salad.webp"
+            },
+            {
+                "nombre": "Mediterranean Salad",
+                "precio": 13,
+                "descripcion": "A hearty salad with Mediterranean ingredients and a zesty dressing.",
+                "image": "../src/assets/Packages/Vegetarian/mediterranean-salad.webp"
+            },
+            {
+                "nombre": "Rainbow Quinoa",
+                "precio": 12,
+                "descripcion": "Colorful and healthy quinoa salad with a variety of vegetables.",
+                "image": "../src/assets/Packages/Vegetarian/rainbow-quinoa.webp"
+            },
+            {
+                "nombre": "Roasted Beet",
+                "precio": 11,
+                "descripcion": "Beets roasted to perfection, served with goat cheese and nuts.",
+                "image": "../src/assets/Packages/Vegetarian/roasted-beet.webp"
+            },
+            {
+                "nombre": "Roasted Butternut",
+                "precio": 12,
+                "descripcion": "Butternut squash roasted with herbs and spices, a comforting dish.",
+                "image": "../src/assets/Packages/Vegetarian/roasted-butternut.webp"
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "nombre": "Dreams of the Caribbean",
+        "platillos": [
+            {
+                "nombre": "Caribbean",
+                "precio": 20,
+                "descripcion": "A taste of the Caribbean with a variety of regional specialties.",
+                "image": "../src/assets/Packages/Traditional/traditional.webp"
+            },
+            {
+                "nombre": "Caribbean Chicken",
+                "precio": 18,
+                "descripcion": "Juicy chicken marinated in Caribbean spices and grilled.",
+                "image": "../src/assets/Packages/Traditional/caribbean-chicken.webp"
+            },
+            {
+                "nombre": "Caribbean Cocadas",
+                "precio": 10,
+                "descripcion": "Sweet coconut treats, a popular Caribbean dessert.",
+                "image": "../src/assets/Packages/Traditional/caribbean-cocadas.webp"
+            },
+            {
+                "nombre": "Caribbean Pan Bon",
+                "precio": 12,
+                "descripcion": "Sweet bread infused with spices and dried fruits from the Caribbean.",
+                "image": "../src/assets/Packages/Traditional/caribbean-pan-bon.webp"
+            },
+            {
+                "nombre": "Caribbean Patacones",
+                "precio": 9,
+                "descripcion": "Crispy fried plantains, a staple in Caribbean cuisine.",
+                "image": "../src/assets/Packages/Traditional/caribbean-patacones.webp"
+            },
+            {
+                "nombre": "Caribbean Patty",
+                "precio": 8,
+                "descripcion": "Spicy meat or vegetable filled pastry, a Caribbean favorite.",
+                "image": "../src/assets/Packages/Traditional/caribbean-patty.webp"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "nombre": "Amanecer Tico",
+        "platillos": [
+            {
+                "nombre": "Sunrise Tico",
+                "precio": 15,
+                "descripcion": "Start your day with a traditional Costa Rican breakfast.",
+                "image": "../src/assets/Packages/Traditional/traditional2.webp"
+            },
+            {
+                "nombre": "Casado",
+                "precio": 12,
+                "descripcion": "A traditional Costa Rican dish with rice, beans, plantains, salad, and a choice of meat or fish.",
+                "image": "../src/assets/Packages/Traditional/casado.webp"
+            },
+            {
+                "nombre": "Omelet",
+                "precio": 10,
+                "descripcion": "Fluffy omelet with your choice of fillings.",
+                "image": "../src/assets/Packages/Traditional/omelet.webp"
+            },
+            {
+                "nombre": "Pinto",
+                "precio": 8,
+                "descripcion": "Gallopinto, a mix of rice and beans with spices, served with eggs.",
+                "image": "../src/assets/Packages/Traditional/pinto.webp"
+            },
+            {
+                "nombre": "Pinto2",
+                "precio": 8,
+                "descripcion": "Another variation of the traditional Costa Rican gallopinto, served with sour cream and tortillas.",
+                "image": "../src/assets/Packages/Traditional/pinto2.webp"
+            },
+            {
+                "nombre": "Platano",
+                "precio": 7,
+                "descripcion": "Sweet fried plantains, a perfect side dish.",
+                "image": "../src/assets/Packages/Traditional/platano.webp"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "nombre": "Pan-orama Costarricense",
+        "platillos": [
+            {
+                "nombre": "BreadRama",
+                "precio": 10,
+                "descripcion": "A variety of traditional Costa Rican breads.",
+                "image": "../src/assets/Packages/Traditional/traditional3.webp"
+            },
+            {
+                "nombre": "Pan Braided",
+                "precio": 5,
+                "descripcion": "Braided bread, lightly sweet and perfect for any time of day.",
+                "image": "../src/assets/Packages/Traditional/pan-braided.webp"
+            },
+            {
+                "nombre": "Pan Chiverre",
+                "precio": 6,
+                "descripcion": "Traditional bread filled with chiverre (a type of squash) jam.",
+                "image": "../src/assets/Packages/Traditional/pan-chiverre.webp"
+            },
+            {
+                "nombre": "Pan Cornbread",
+                "precio": 4,
+                "descripcion": "Sweet cornbread, a Costa Rican variation.",
+                "image": "../src/assets/Packages/Traditional/pan-cornbread.webp"
+            },
+            {
+                "nombre": "Pan Rosquillas",
+                "precio": 5,
+                "descripcion": "Traditional cornmeal doughnuts, lightly sweetened and spiced.",
+                "image": "../src/assets/Packages/Traditional/pan-rosquillas.webp"
+            },
+            {
+                "nombre": "Pan Sobado",
+                "precio": 6,
+                "descripcion": "Soft, sweet bread that's a favorite in Costa Rican homes.",
+                "image": "../src/assets/Packages/Traditional/pan-sobado.webp"
             }
         ]
     }
