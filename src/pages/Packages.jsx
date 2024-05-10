@@ -7,6 +7,7 @@ import CardPackages from '../components/Card';
 import Footer from '../components/Footer';
 import SearchPackage from '../components/Search';
 
+
 // Seafood
 import Lobster from '../assets/Packages/Seafood/sea-food.webp';
 import Sushi from '../assets/Packages/Seafood/sea-food2.webp';
@@ -107,8 +108,6 @@ import Pancakes from '../assets/Packages/Traditional/pancakes.webp';
 import Pinto from '../assets/Packages/Traditional/pinto.webp';
 import Pinto2 from '../assets/Packages/Traditional/pinto2.webp';
 import Platano from '../assets/Packages/Traditional/platano.webp';
-import Footer from '../components/Footer';
-import SearchPackage from '../components/Search';
 
 export default function Packages() {
   const cardsData = [
@@ -228,6 +227,7 @@ export default function Packages() {
   return (
     <>
     <Header />
+    
     <SearchPackage data={cardsData} />
     
     <Footer />
