@@ -1,0 +1,43 @@
+@startuml
+!define RECTANGLE class
+
+RECTANGLE Cliente {
+    - Nombre
+    - Cédula
+    - Teléfono
+}
+
+RECTANGLE App {
+    - Paquetes
+    - Contacto
+    - Servicios
+}
+
+RECTANGLE Proveedor {
+    - Nombre
+    - Tipo de servicio
+    - Contacto
+}
+
+RECTANGLE Evento {
+    - Fecha
+    - Hora
+    - Ubicación
+    - Cantidad invitados
+}
+
+RECTANGLE Paquetes {
+    - Nombre
+    - Descripción
+    - Platillos
+    - Precio
+}
+
+Cliente "1" -right- "1..N" App : "Interactúa"
+Cliente "1" -down- "1..N" Evento : "Reserva >"
+App "1" -down- "1..N" Paquetes : "Muestra >"
+Proveedor "1..N" -right- "1..N" Evento : "Provee servicios para >"
+Evento "1..N" -left- "1..N" Proveedor : "< Incluye servicios de"
+Paquetes "1" -right- "1..N" Evento : "Seleccionado para >"
+
+@enduml

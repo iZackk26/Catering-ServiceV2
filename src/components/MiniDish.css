@@ -1,0 +1,30 @@
+.miniDish-container {
+  margin-right: 0.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.miniDish-img {
+  border-radius: 9999px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.miniDish-img:hover {
+  transform: scale(1.25);
+}
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera*/
+}
