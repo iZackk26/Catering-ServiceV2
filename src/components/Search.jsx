@@ -29,12 +29,12 @@ export default function SearchPackage({ data }) {
 
   return (
     <div>
-      <div className="rounded flex justify-left px-6 mt-4 mb-3">
-        <button onClick={toggleSearchVisibility} className="text-3xl p-1 justify-center right-px">
+      <div className="flex justify-end px-8 ">
+        <button onClick={toggleSearchVisibility} className="text-3xl">
           <FiSearch />
         </button>
         {isSearchVisible && (
-          <input className="py-2 px-4 border border-gray-300 rounded-md shadow-sm border-0 focus:ring-0"
+          <input className="ml-2 py-1 px-2 border border-gray-300 rounded-md shadow-sm border-0 focus:ring-0"
             type="text"
             placeholder="Search packages"
             value={searchTerm}
@@ -42,7 +42,7 @@ export default function SearchPackage({ data }) {
           />
         )}
       </div>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4 px-6'>
+      <div className='px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
         {filteredData.map((item, index) => (
           <CardPackages key={index} {...item} />
         ))}

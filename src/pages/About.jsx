@@ -6,7 +6,6 @@ import FAQ from '../components/FAQ';
 
 import Image from '../assets/About/chef.webp';
 
-
 const AboutUs = () => {
   return (
     <>

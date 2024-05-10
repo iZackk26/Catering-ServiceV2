@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 // Components
 import Header from '../components/Header'
 import CardPackages from '../components/Card';
+import Footer from '../components/Footer';
+import SearchPackage from '../components/Search';
 
 // Seafood
 import Lobster from '../assets/Packages/Seafood/sea-food.webp';
@@ -115,7 +118,8 @@ export default function Packages() {
       title: "Fresh Ocean",
       description: "Experience the freshness of the sea with our premium selection, featuring a variety of seafood dishes designed for the ultimate ocean flavor experience",
       stars: 4,
-      miniDishes: [GrilledLobster, ShrimPineappleSkewers, Ceviche, Salmon, Paella, Tacos]
+      miniDishes: [GrilledLobster, ShrimPineappleSkewers, Ceviche, Salmon, Paella, Tacos],
+      id: 1
     },
     {
       imageUrl: Sushi,
@@ -123,7 +127,8 @@ export default function Packages() {
       title: "Sea Delights",
       description: "Delve into exquisite Japanese flavors with our carefully curated sushi package, offering a blend of traditional and contemporary sushi and sashimi.",
       stars: 4,
-      miniDishes: [Nigiri, Okonomiyaki, FishDonburi, Udon, Sashimi, Tempura]
+      miniDishes: [Nigiri, Okonomiyaki, FishDonburi, Udon, Sashimi, Tempura],
+      id: 2
     },
     {
       imageUrl: Fish,
@@ -131,7 +136,8 @@ export default function Packages() {
       title: "Fisherman's Feast",
       description: "Savor the heartiness of classic seafood with our 'Fisherman's Feast,' a collection of comforting and flavorful dishes straight from the fisherman's net.",
       stars: 3,
-      miniDishes: [BakedSalmon, GoldenCrispyTilapia, SavaloSupreme, MachacaWithEggs, Seasame, GrilledFishFillet]
+      miniDishes: [BakedSalmon, GoldenCrispyTilapia, SavaloSupreme, MachacaWithEggs, Seasame, GrilledFishFillet],
+      id: 3
     },
     {
       imageUrl: LuxuryClassics,
@@ -139,7 +145,8 @@ export default function Packages() {
       title: "Luxury Classics",
       description: "A premium selection for connoisseurs of the finest meats. Relish the unparalleled quality with every bite.",
       stars: 5,
-      miniDishes: [FiletMignon, GrillLobster, AngusRibeye, Bistec, Wagyu, Tomahawk]
+      miniDishes: [FiletMignon, GrillLobster, AngusRibeye, Bistec, Wagyu, Tomahawk],
+      id: 4
 
     },
     {
@@ -148,7 +155,8 @@ export default function Packages() {
       title: "Global Tour",
       description: "Embark on a culinary journey with meats from around the world. An unforgettable taste adventure awaits.",
       stars: 3,
-      miniDishes: [ChickenCordonBleu, ChickenTikkaMasalaWithPotatoes, Mushroom, ChickenCurry, HerbRoastedChicken, Suiza]
+      miniDishes: [ChickenCordonBleu, ChickenTikkaMasalaWithPotatoes, Mushroom, ChickenCurry, HerbRoastedChicken, Suiza],
+      id: 5
 
     },
     {
@@ -157,7 +165,8 @@ export default function Packages() {
       title: "Grill Party",
       description: "The ultimate selection for grill enthusiasts. Elevate your next barbecue experience with the finest meats and sides.",
       stars: 4,
-      miniDishes: [GrillOctopus, GrillDuck, GrillLobster, GrillChorizo, GrillPork, GrillSausage]
+      miniDishes: [GrillOctopus, GrillDuck, GrillLobster, GrillChorizo, GrillPork, GrillSausage],
+      id: 6
     },
     {
       imageUrl: Veggie,
@@ -165,7 +174,8 @@ export default function Packages() {
       title: "Veggie Soups",
       description: "Offers a curated selection of flavorful international vegetarian soups. Ideal for any event seeking delicious, healthy options.",
       stars: 1,
-      miniDishes: [CreamyTomatoe, RoastedButternut, VegetableMinestrone, CoconutCurry, CreamyMushrooms, SpicyBlackBean] 
+      miniDishes: [CreamyTomatoe, RoastedButternut, VegetableMinestrone, CoconutCurry, CreamyMushrooms, SpicyBlackBean],
+      id: 7
     },
     {
       imageUrl: GreenGastronomy,
@@ -173,7 +183,8 @@ export default function Packages() {
       title: "Green Gastronomy",
       description: "Explore the richness and diversity of vegetarian cuisine with this eclectic package. From comforting dishes to exotic flavors, this menu has it all.",
       stars: 3,
-      miniDishes: [MediterraneanSalad, RainbowQuinoa, RoastedBeet, FalafelSalad, TropicalSalad, Capresse]
+      miniDishes: [MediterraneanSalad, RainbowQuinoa, RoastedBeet, FalafelSalad, TropicalSalad, Capresse],
+      id: 8
     },
     {
       imageUrl: GardenDelights,
@@ -181,7 +192,8 @@ export default function Packages() {
       title: "Garden Delights",
       description: "Enjoy a garden-inspired culinary experience with this irresistible package. Each dish is bursting with freshness and flavor, ensuring a memorable meal.",
       stars: 4,
-      miniDishes: [TacosVege, Pizza, Hamburguer, PanPita, Wrap, Garbanzos]
+      miniDishes: [TacosVege, Pizza, Hamburguer, PanPita, Wrap, Garbanzos],
+      id: 9
     },
     {
       imageUrl: Caribbean,
@@ -189,7 +201,8 @@ export default function Packages() {
       title: "Caribbean Flavors",
       description: "Experience the vibrant and bold flavors of the Caribbean with this package. Each dish is a celebration of the region's rich culinary heritage.",
       stars: 4,
-      miniDishes: [CaribbeanRiceBeans, CaribbeanCocadas, CaribbeanChicken, CaribbeanPanBon, CaribbeanPatacones, CaribbeanPatty]
+      miniDishes: [CaribbeanRiceBeans, CaribbeanCocadas, CaribbeanChicken, CaribbeanPanBon, CaribbeanPatacones, CaribbeanPatty],
+      id: 10
     },
     {
       imageUrl: SunriseTico,
@@ -197,7 +210,8 @@ export default function Packages() {
       title: "Sunrise Tico",
       description: "A breakfast that combines the rich flavors of traditional gallo pinto, sweet plantains, and aromatic coffee.",
       stars: 5,
-      miniDishes: [Pinto, Pinto2, Casado, Omelet, Pancakes, Platano]
+      miniDishes: [Pinto, Pinto2, Casado, Omelet, Pancakes, Platano],
+      id: 11
     },
     {
       imageUrl: BreadRama,
@@ -205,7 +219,8 @@ export default function Packages() {
       title: "Bread Rama",
       description: "An exclusive selection of traditional Costa Rican breads, each with its own unique history and flavor.",
       stars: 3,
-      miniDishes: [PanSobado, PanRosquillas, PanCornbread, PanBraided, PanSweetBread, PanChiverre]
+      miniDishes: [PanSobado, PanRosquillas, PanCornbread, PanBraided, PanSweetBread, PanChiverre],
+      id: 12
     }
     
   ]
@@ -213,10 +228,9 @@ export default function Packages() {
   return (
     <>
     <Header />
-
     <SearchPackage data={cardsData} />
     
     <Footer />
     </>
-  )
+  );
 }
