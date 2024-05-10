@@ -36,8 +36,6 @@ export default function Contact() {
       <Link to="/catering"> <Button gradientDuoTone="greenToBlue">Contact us</Button></Link>
       </div>
       
-        
-      
       {/* <div className="container mx-auto mt-5 px-4">
         <h2 className="text-center mb-4">Contact Our Developers</h2>
         <div className="flex justify-around flex-nowrap items-center gap-4">
